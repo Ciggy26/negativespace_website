@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legal Notice — negativespace</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/legal.css">
+</head>
+<body>
+<div class="stars-a"></div>
+<div class="stars-b" id="starsB"></div>
+<div class="nebula-field" id="nebulaField">
+  <div class="neb-swirl"></div>
+  <div class="neb neb-1"></div>
+  <div class="neb neb-2"></div>
+  <div class="neb neb-3"></div>
+</div>
+<div class="grain"></div>
+
+<nav>
+  <a href="index.html" style="display:flex; align-items:center; gap:14px; text-decoration:none;">
+    <img src="assets/negativespace-mark.webp" alt="negativespace mark">
+    <span class="nav-word">negativespace</span>
+  </a>
+</nav>
+
+<div class="wrap">
+  <div class="page-title reveal">Legal Notice (Imprint)</div>
+  <div class="page-sub reveal delay-1">Information according to § 5 DDG (Digitale-Dienste-Gesetz, Germany)</div>
+
+  <div class="label reveal">Operator of this website</div>
+  <div class="block"><span class="ph">[ negativespace — legal company name / GbR ]</span></div>
+  <div class="block"><span class="ph">[ Street and house number ]</span></div>
+  <div class="block"><span class="ph">[ Postal code, City ]</span></div>
+  <div class="block">Germany</div>
+
+  <div class="label reveal">Represented by</div>
+  <p>Ana Micanovic, Ilia Tarasov, Loris Gross</p>
+
+  <div class="label reveal">Contact</div>
+  <div class="block">Email: <span class="ph">[ contact@negativespacegames.com ]</span></div>
+  <div class="block">Phone: <span class="ph">[ optional ]</span></div>
+
+  <div class="label reveal">Commercial register</div>
+  <p><span class="ph">[ Registration court and registration number — or state "Not applicable (partnership under German civil law / GbR)" if not registered in the Handelsregister ]</span></p>
+
+  <div class="label reveal">VAT identification number</div>
+  <p>According to §27a of the German VAT Act (UStG): <span class="ph">[ insert VAT ID, or state "Not applicable — small business regulation per §19 UStG" ]</span></p>
+
+  <div class="label reveal">Responsible for content</div>
+  <p>According to § 18 Abs. 2 MStV (Interstate Media Treaty):<br>
+  <span class="ph">[ Name of one natural person ]</span>, <span class="ph">[ same address as above ]</span></p>
+
+  <div class="label reveal">Dispute resolution</div>
+  <p>We are not obliged and generally not willing to participate in dispute resolution proceedings before a consumer arbitration board. The EU's former online dispute resolution (OS/ODR) platform was discontinued by the European Commission on 20 July 2025 and is no longer applicable.</p>
+
+  <div class="label reveal">Disclaimer</div>
+  <p>Despite careful content control, we assume no liability for the content of external links. The operators of linked pages are solely responsible for their content. This website's content has been created with care; however, we cannot guarantee the accuracy, completeness, or timeliness of the content at all times.</p>
+
+  <p class="faint" style="margin-top:60px;">This is a draft template, not legal advice. Please review and complete the bracketed fields — ideally with a lawyer or a service such as e-recht24.de — before publishing, especially the registered address, register details, and VAT status.</p>
+</div>
+
+<footer>
+  <div class="footer-mark">
+    <img src="assets/negativespace-mark.webp" alt="negativespace">
+    <span class="footer-word">negativespace</span>
+  </div>
+  <div class="footer-legal">negativespace — Studio für digitale Erfahrungen. © 2026. <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></div>
+</footer>
+
+<script>
+(function(){
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var starsB = document.getElementById('starsB');
+  var nebula = document.getElementById('nebulaField');
+  var ticking = false;
+
+  function onScroll(){
+    if (reduced) return;
+    var y = window.scrollY || window.pageYOffset;
+    if (starsB) starsB.style.transform = 'translateY(' + (y * 0.04) + 'px)';
+    if (nebula) nebula.style.transform = 'translateY(' + (y * -0.03) + 'px)';
+    ticking = false;
+  }
+  window.addEventListener('scroll', function(){
+    if (!ticking){ window.requestAnimationFrame(onScroll); ticking = true; }
+  }, { passive: true });
+
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !reduced){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in-view'); });
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+:root{
+  --void:#08070a;
+  --ink:#eeecf0;
+  --ink-dim:#a49fae;
+  --ink-faint:#615c6c;
+  --signal:#8657ff;
+  --signal-2:#c3a6ff;
+  --signal-bg: rgba(134,87,255,0.16);
+  --font-mono: 'Roboto Mono', monospace;
+}
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  background:var(--void);
+  color:var(--ink);
+  font-family:var(--font-mono);
+  line-height:1.85;
+  font-size:14.5px;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  position:relative;
+}
+
+/* ---------- ambient space layers: identical to index.html, fixed = present behind everything ---------- */
+.stars-a, .stars-b{
+  position:fixed; inset:0; z-index:0; pointer-events:none; width:1px; height:1px;
+}
+.stars-a{ box-shadow:63.94vw 2.5vh rgba(255,255,255,0.35), 22.32vw 73.65vh rgba(255,255,255,0.49), 89.22vw 8.69vh rgba(255,255,255,0.4), 2.98vw 21.86vh rgba(255,255,255,0.43), 2.65vw 19.88vh rgba(255,255,255,0.48), 54.49vw 22.04vh rgba(255,255,255,0.46), 80.94vw 0.65vh rgba(255,255,255,0.53), 69.81vw 34.03vh rgba(255,255,255,0.3), 95.72vw 33.66vh rgba(255,255,255,0.28), 9.67vw 84.75vh rgba(255,255,255,0.46), 80.71vw 72.97vh rgba(255,255,255,0.44), 97.31vw 37.85vh rgba(255,255,255,0.44), 82.94vw 61.85vh rgba(255,255,255,0.55), 57.74vw 70.46vh rgba(255,255,255,0.27), 22.79vw 28.94vh rgba(255,255,255,0.28), 23.28vw 10.1vh rgba(255,255,255,0.35), 63.57vw 36.48vh rgba(255,255,255,0.38), 20.95vw 26.7vh rgba(255,255,255,0.58), 64.8vw 60.91vh rgba(255,255,255,0.31), 72.91vw 16.34vh rgba(255,255,255,0.38), 98.95vw 64.0vh rgba(255,255,255,0.44), 68.46vw 84.29vh rgba(255,255,255,0.52), 22.9vw 3.21vh rgba(255,255,255,0.36), 26.77vw 21.1vh rgba(255,255,255,0.58), 87.64vw 31.47vh rgba(255,255,255,0.48), 39.56vw 91.45vh rgba(255,255,255,0.41), 26.49vw 24.66vh rgba(255,255,255,0.45), 26.27vw 58.46vh rgba(255,255,255,0.56), 39.94vw 21.93vh rgba(255,255,255,0.6), 50.95vw 9.09vh rgba(255,255,255,0.27), 10.96vw 62.74vh rgba(255,255,255,0.53), 42.22vw 6.35vh rgba(255,255,255,0.38), 99.61vw 52.91vh rgba(255,255,255,0.59), 86.08vw 1.15vh rgba(255,255,255,0.5), 68.17vw 53.7vh rgba(255,255,255,0.34), 64.1vw 11.16vh rgba(255,255,255,0.4), 45.37vw 95.38vh rgba(255,255,255,0.56), 26.34vw 50.06vh rgba(255,255,255,0.31), 91.26vw 87.05vh rgba(255,255,255,0.35), 63.89vw 60.9vh rgba(255,255,255,0.3), 76.25vw 53.94vh rgba(255,255,255,0.52), 53.04vw 0.06vh rgba(255,255,255,0.36), 1.95vw 92.91vh rgba(255,255,255,0.56), 83.17vw 30.75vh rgba(255,255,255,0.27), 87.8vw 94.69vh rgba(255,255,255,0.28), 48.6vw 6.92vh rgba(255,255,255,0.52), 76.58vw 12.84vh rgba(255,255,255,0.42), 54.98vw 26.51vh rgba(255,255,255,0.56), 42.31vw 21.18vh rgba(255,255,255,0.44), 72.99vw 20.12vh rgba(255,255,255,0.36), 99.51vw 64.99vh rgba(255,255,255,0.4), 51.76vw 12.1vh rgba(255,255,255,0.33), 33.81vw 58.83vh rgba(255,255,255,0.33), 22.02vw 7.1vh rgba(255,255,255,0.47), 22.89vw 90.54vh rgba(255,255,255,0.55), 7.09vw 23.8vh rgba(255,255,255,0.48), 21.42vw 13.23vh rgba(255,255,255,0.58), 57.1vw 47.27vh rgba(255,255,255,0.52), 80.75vw 19.04vh rgba(255,255,255,0.28), 43.11vw 42.36vh rgba(255,255,255,0.41), 72.91vw 67.34vh rgba(255,255,255,0.59), 9.84vw 40.26vh rgba(255,255,255,0.37), 86.17vw 24.87vh rgba(255,255,255,0.32), 44.86vw 42.19vh rgba(255,255,255,0.35), 24.98vw 92.33vh rgba(255,255,255,0.41), 86.13vw 55.03vh rgba(255,255,255,0.27), 99.93vw 83.6vh rgba(255,255,255,0.59), 92.64vw 84.87vh rgba(255,255,255,0.31), 48.56vw 21.37vh rgba(255,255,255,0.39), 5.86vw 37.9vh rgba(255,255,255,0.59), 26.52vw 78.41vh rgba(255,255,255,0.41), 42.3vw 95.73vh rgba(255,255,255,0.6), 55.58vw 71.84vh rgba(255,255,255,0.3), 29.67vw 96.87vh rgba(255,255,255,0.45), 54.22vw 74.8vh rgba(255,255,255,0.27), 58.42vw 50.29vh rgba(255,255,255,0.55), 15.74vw 96.08vh rgba(255,255,255,0.28), 18.58vw 59.5vh rgba(255,255,255,0.49), 23.52vw 11.99vh rgba(255,255,255,0.56), 24.62vw 59.45vh rgba(255,255,255,0.47), 41.92vw 58.37vh rgba(255,255,255,0.43), 93.47vw 20.43vh rgba(255,255,255,0.5), 23.87vw 39.58vh rgba(255,255,255,0.49), 30.0vw 31.62vh rgba(255,255,255,0.51), 7.25vw 45.83vh rgba(255,255,255,0.6), 99.61vw 7.33vh rgba(255,255,255,0.32), 26.52vw 93.33vh rgba(255,255,255,0.56), 87.93vw 36.95vh rgba(255,255,255,0.31), 83.37vw 70.35vh rgba(255,255,255,0.46), 98.72vw 65.4vh rgba(255,255,255,0.25), 81.71vw 29.94vh rgba(255,255,255,0.48), 93.89vw 13.43vh rgba(255,255,255,0.29), 10.7vw 55.32vh rgba(255,255,255,0.35), 60.48vw 71.76vh rgba(255,255,255,0.32), 63.42vw 26.4vh rgba(255,255,255,0.42), 90.53vw 84.61vh rgba(255,255,255,0.28), 42.36vw 27.67vh rgba(255,255,255,0.25), 77.11vw 63.71vh rgba(255,255,255,0.34), 74.12vw 55.17vh rgba(255,255,255,0.4), 0.97vw 7.52vh rgba(255,255,255,0.56), 90.39vw 54.56vh rgba(255,255,255,0.54), 58.25vw 14.81vh rgba(255,255,255,0.29), 30.83vw 89.9vh rgba(255,255,255,0.53), 86.07vw 89.89vh rgba(255,255,255,0.32), 24.95vw 10.28vh rgba(255,255,255,0.52), 88.41vw 40.64vh rgba(255,255,255,0.47), 15.46vw 92.99vh rgba(255,255,255,0.55), 97.62vw 81.08vh rgba(255,255,255,0.56), 2.48vw 73.66vh rgba(255,255,255,0.37), 93.08vw 80.22vh rgba(255,255,255,0.55), 81.07vw 26.68vh rgba(255,255,255,0.53), 10.81vw 87.22vh rgba(255,255,255,0.55), 22.24vw 81.66vh rgba(255,255,255,0.41), 30.52vw 79.53vh rgba(255,255,255,0.33), 2.37vw 19.31vh rgba(255,255,255,0.36), 86.44vw 96.69vh rgba(255,255,255,0.35), 64.15vw 39.97vh rgba(255,255,255,0.59), 53.62vw 93.92vh rgba(255,255,255,0.29), 97.04vw 17.86vh rgba(255,255,255,0.59), 26.55vw 10.84vh rgba(255,255,255,0.4), 72.85vw 31.37vh rgba(255,255,255,0.46), 51.14vw 38.52vh rgba(255,255,255,0.45), 25.47vw 70.88vh rgba(255,255,255,0.25), 92.56vw 53.85vh rgba(255,255,255,0.5), 74.2vw 67.06vh rgba(255,255,255,0.38), 7.0vw 66.42vh rgba(255,255,255,0.37), 31.39vw 84.8vh rgba(255,255,255,0.5), 30.03vw 30.93vh rgba(255,255,255,0.39), 40.24vw 29.57vh rgba(255,255,255,0.29), 42.04vw 94.04vh rgba(255,255,255,0.49), 90.28vw 61.55vh rgba(255,255,255,0.36), 54.79vw 0.04vh rgba(255,255,255,0.35), 42.99vw 58.0vh rgba(255,255,255,0.48), 46.5vw 44.22vh rgba(255,255,255,0.32), 47.32vw 90.12vh rgba(255,255,255,0.53), 16.97vw 8.48vh rgba(255,255,255,0.43), 63.29vw 33.52vh rgba(255,255,255,0.54), 75.11vw 67.28vh rgba(255,255,255,0.33), 19.91vw 2.44vh rgba(255,255,255,0.34), 47.51vw 84.97vh rgba(255,255,255,0.28); opacity:0.55; }
+.stars-b{ box-shadow:41.44vw 62.98vh rgba(255,255,255,0.59), 69.64vw 49.44vh rgba(255,255,255,0.61), 65.61vw 0.55vh rgba(255,255,255,0.84), 77.0vw 10.66vh rgba(255,255,255,0.69), 17.59vw 95.8vh rgba(255,255,255,0.73), 5.02vw 24.92vh rgba(255,255,255,0.88), 45.65vw 80.14vh rgba(255,255,255,0.8), 98.79vw 59.55vh rgba(255,255,255,0.93), 89.14vw 61.27vh rgba(255,255,255,0.82), 50.48vw 83.06vh rgba(255,255,255,0.75), 89.72vw 74.37vh rgba(255,255,255,0.71), 25.92vw 24.72vh rgba(255,255,255,0.79), 76.58vw 52.13vh rgba(255,255,255,0.78), 27.46vw 7.75vh rgba(255,255,255,0.63), 27.17vw 31.97vh rgba(255,255,255,0.74), 13.84vw 23.13vh rgba(255,255,255,0.81), 70.64vw 6.42vh rgba(255,255,255,0.68), 54.26vw 41.58vh rgba(255,255,255,0.59), 42.01vw 90.48vh rgba(255,255,255,0.76), 69.55vw 85.67vh rgba(255,255,255,0.84), 38.04vw 0.59vh rgba(255,255,255,0.66), 75.35vw 85.34vh rgba(255,255,255,0.93), 41.9vw 74.75vh rgba(255,255,255,0.75), 60.33vw 22.05vh rgba(255,255,255,0.6), 43.58vw 2.9vh rgba(255,255,255,0.65), 67.91vw 40.43vh rgba(255,255,255,0.57), 46.74vw 12.76vh rgba(255,255,255,0.78), 2.7vw 39.4vh rgba(255,255,255,0.75), 2.71vw 64.27vh rgba(255,255,255,0.56), 46.17vw 5.03vh rgba(255,255,255,0.67), 21.17vw 32.68vh rgba(255,255,255,0.84), 37.91vw 75.2vh rgba(255,255,255,0.87), 25.23vw 8.19vh rgba(255,255,255,0.51), 53.94vw 99.99vh rgba(255,255,255,0.66), 65.01vw 78.12vh rgba(255,255,255,0.79), 75.42vw 94.96vh rgba(255,255,255,0.59), 2.04vw 15.24vh rgba(255,255,255,0.56), 66.95vw 56.4vh rgba(255,255,255,0.6), 69.95vw 76.69vh rgba(255,255,255,0.58), 60.72vw 74.79vh rgba(255,255,255,0.55), 81.93vw 96.47vh rgba(255,255,255,0.55), 2.57vw 31.2vh rgba(255,255,255,0.8), 95.82vw 39.67vh rgba(255,255,255,0.82), 7.6vw 69.06vh rgba(255,255,255,0.78), 10.19vw 77.25vh rgba(255,255,255,0.88); opacity:0.85; animation:twinkle 7s ease-in-out infinite; will-change:transform; }
+@keyframes twinkle{ 0%,100%{opacity:0.85;} 50%{opacity:0.35;} }
+
+.nebula-field{ position:fixed; inset:-15%; z-index:0; pointer-events:none; will-change:transform; }
+.neb{ position:absolute; border-radius:50%; filter:blur(70px); }
+.neb-1{
+  width:760px; height:760px; top:2%; left:50%; transform:translateX(-50%);
+  background:radial-gradient(circle, rgba(134,87,255,0.30), transparent 65%);
+  animation:drift-a 24s ease-in-out infinite;
+}
+.neb-2{
+  width:560px; height:560px; bottom:6%; left:10%;
+  background:radial-gradient(circle, rgba(70,110,255,0.15), transparent 70%);
+  animation:drift-b 30s ease-in-out infinite;
+}
+.neb-3{
+  width:520px; height:520px; bottom:14%; right:6%;
+  background:radial-gradient(circle, rgba(210,90,220,0.13), transparent 70%);
+  animation:drift-a 20s ease-in-out infinite reverse;
+}
+.neb-swirl{
+  position:absolute; inset:14% 8%;
+  background:conic-gradient(from 0deg at 50% 50%,
+    rgba(134,87,255,0.09), rgba(70,50,180,0.03) 22%,
+    rgba(200,110,255,0.09) 48%, transparent 68%,
+    rgba(90,130,255,0.07) 88%, rgba(134,87,255,0.09));
+  filter:blur(80px);
+  mix-blend-mode:screen;
+  animation:swirl 50s linear infinite;
+}
+@keyframes drift-a{ 0%,100%{ transform:translate(0,0) scale(1); } 50%{ transform:translate(3%,4%) scale(1.05); } }
+@keyframes drift-b{ 0%,100%{ transform:translate(0,0) scale(1); } 50%{ transform:translate(-4%,-3%) scale(0.96); } }
+@keyframes swirl{ from{ transform:rotate(0deg); } to{ transform:rotate(360deg); } }
+
+.grain{
+  position:fixed; inset:0; z-index:999; pointer-events:none;
+  opacity:0.03; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.wrap{ max-width:760px; margin:0 auto; padding:0 40px 100px; position:relative; z-index:2; }
+
+/* ---------- nav (transparent, identical to index.html) ---------- */
+nav{
+  position:sticky; top:0; z-index:50;
+  display:flex; align-items:center;
+  gap:14px;
+  padding:24px 40px;
+  background:transparent;
+}
+nav img{ height:42px; width:auto; filter: drop-shadow(0 0 8px rgba(134,87,255,0.5)); }
+.nav-word{
+  font-family:var(--font-mono); font-size:16px; font-weight:700; letter-spacing:0.24em;
+  color:var(--ink);
+}
+nav a{ text-decoration:none; }
+
+a{ color:var(--signal-2); }
+
+.page-title{
+  position:relative; z-index:2;
+  font-size:clamp(24px,4vw,34px); font-weight:700; margin:20px 0 8px; letter-spacing:-0.01em;
+}
+.page-sub{ position:relative; z-index:2; color:var(--ink-faint); font-size:12.5px; margin-bottom:50px; }
+
+.label{
+  font-family:var(--font-mono); font-weight:700; font-size:14px;
+  display:inline-block; padding:6px 12px; margin:44px 0 18px;
+  background:var(--signal-bg); color:var(--ink); border-radius:3px;
+  letter-spacing:0.01em;
+}
+.label:first-of-type{ margin-top:0; }
+
+p{ color:var(--ink-dim); margin:0 0 14px; }
+.block{ margin-bottom:6px; color:var(--ink); }
+.faint{ color:var(--ink-faint); font-size:12.5px; }
+.ph{ color:var(--signal-2); }
+ul{ color:var(--ink-dim); padding-left:20px; margin:0 0 14px; }
+li{ margin-bottom:6px; }
+
+/* scroll reveal — identical to index.html */
+.reveal{ opacity:0; transform:translateY(26px); transition:opacity .8s ease, transform .8s ease; }
+.reveal.in-view{ opacity:1; transform:translateY(0); }
+.reveal.delay-1{ transition-delay:.08s; }
+.reveal.delay-2{ transition-delay:.16s; }
+.reveal.delay-3{ transition-delay:.24s; }
+
+footer{
+  padding:34px 0 46px; display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:14px; max-width:1040px; margin:0 auto; position:relative; z-index:1;
+}
+.footer-mark{ display:flex; align-items:center; gap:10px; }
+.footer-mark img{ height:26px; opacity:0.8; }
+.footer-word{ font-family:var(--font-mono); font-size:12px; letter-spacing:0.14em; color:var(--ink-faint); }
+.footer-legal{ font-family:var(--font-mono); font-size:10.5px; color:var(--ink-faint); }
+.footer-legal a{ color:var(--ink-faint); }
+
+@media (max-width:780px){
+  .wrap{ padding:0 22px 70px; }
+  nav{ padding:16px 22px; }
+  nav img{ height:34px; }
+  footer{ padding:30px 22px 40px; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
+}
