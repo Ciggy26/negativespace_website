@@ -107,7 +107,10 @@
   }
   .astro-parallax{ display:flex; justify-content:center; width:100%; will-change:transform; }
   .astro-triangle{
-    position:absolute; width:1300px; height:1300px; max-width:none;
+    position:absolute; top:50%; left:50%;
+    width:1300px; height:1300px; max-width:none;
+    margin-left:-650px;
+    margin-top:calc(-650px - 90px); /* the "90px" is how far up it's shifted — increase/decrease to taste */
     animation: spin 260s linear infinite;
     opacity:0.9;
   }
@@ -207,7 +210,7 @@
     section{ padding:64px 0; }
     .hero{ padding:90px 0 60px; }
     .hero-claim{ white-space:normal; width:auto !important; border-right:none; animation:none; }
-    .astro-triangle{ width:520px; height:520px; }
+    .astro-triangle{ width:520px; height:520px; margin-left:-260px; margin-top:calc(-260px - 40px); }
     .astro-img{ width:min(92vw,520px); }
   }
 
