@@ -162,9 +162,9 @@
   .reveal.delay-2{ transition-delay:.16s; }
   .reveal.delay-3{ transition-delay:.24s; }
 
-  /* who we are — crew row */
-  .crew-row{ display:flex; gap:50px; margin-top:52px; flex-wrap:wrap; }
-  .crew-col{ flex:1; min-width:220px; }
+  /* who we are — crew grid: two per row */
+  .crew-grid{ display:grid; grid-template-columns:1fr 1fr; gap:50px 50px; margin-top:52px; }
+  .crew-col{ min-width:0; }
   .crew-name{ font-family:var(--font-mono); font-weight:700; font-size:15.5px; letter-spacing:0.06em; margin-bottom:6px; }
   .crew-role{ font-size:12.5px; color:var(--signal-2); margin-bottom:14px; }
   .crew-links{ display:flex; align-items:center; gap:16px; }
@@ -210,7 +210,7 @@
     nav{ padding:16px 22px; }
     nav img{ height:34px; }
     .split-cols{ grid-template-columns:1fr; gap:34px; }
-    .crew-row{ flex-direction:column; gap:30px; }
+    .crew-grid{ grid-template-columns:1fr; gap:30px; }
     section{ padding:64px 0; }
     .hero{ padding:90px 0 60px; }
     .hero-claim{ white-space:normal; width:auto !important; border-right:none; animation:none; }
@@ -262,7 +262,7 @@
       <p>negativespace is the space between idea and its digital reality. We are a studio of three creatives building games rooted in experience and emotion. In art, what you leave out is just as important as what you put in. We cut through the noise so you can feel what matters.</p> 
       <p>Games are a dynamic dialogue. As creators, we relinquish total control, knowing the final experience is shaped by the player’s own timing, life, and perspective. We design the space; you bring the meaning.</p>
     </div>
-    <div class="crew-row">
+    <div class="crew-grid">
       <div class="crew-col reveal delay-1">
         <div class="crew-name">ANA MICANOVIC</div>
         <div class="crew-role">Producer</div>
@@ -302,15 +302,14 @@
           </a>
         </div>
       </div>
-      <div class="crew-row">
       <div class="crew-col reveal delay-4">
-        <div class="crew-name">Georg Winterfeld</div>
+        <div class="crew-name">GEORG WINTERFELD</div>
         <div class="crew-role">Tech Director</div>
         <div class="crew-links">
           <a href="mailto:georg@negativespacegames.com" aria-label="E-Mail Georg Winterfeld" title="E-Mail">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3.5 7L12 13L20.5 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a href="https://www.linkedin.com/in/georg-winterfeld-4927bb32a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Ana Micanovic" title="LinkedIn">
+          <a href="https://www.linkedin.com/in/georg-winterfeld-4927bb32a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Georg Winterfeld" title="LinkedIn">
             <svg viewBox="0 0 448 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
           </a>
         </div>
